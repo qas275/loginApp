@@ -1,0 +1,16 @@
+<div style="text-align: right;">
+    <button mat-raised-button color="primary" type="button" (click)="logout()" [routerLink]="['/login']">Logout</button>
+</div>
+
+
+<div style="display: flex; justify-content: center;">
+    <h2>
+        <h1>Welcome {{username}} </h1>
+        <b>Role:</b> {{role | titlecase}}
+        <br>
+        <br>
+        <div *ngIf="role==='manager'">
+        <button mat-raised-button color="primary" type="button" [routerLink]="['/admin']">Administrator Page</button>
+        </div>
+    </h2>
+</div>
