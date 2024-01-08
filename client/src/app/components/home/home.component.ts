@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit{
     const retrievedString = sessionStorage.getItem("WS_JWT");
     let jwt: string | undefined;
     if (retrievedString !== null) {
-      // Now TypeScript knows that retrievedString is a string
       jwt = retrievedString;
       console.log(jwt);
       this.loginService.authenticateJWT(jwt).then((response)=>{
